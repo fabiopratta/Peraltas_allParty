@@ -1,0 +1,44 @@
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Nome</ion-label>
+      <ion-input type="text"  [(ngModel)]="userData.name" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Email</ion-label>
+      <ion-input type="email"  [(ngModel)]="userData.email"></ion-input>
+    </ion-item>
+    <br/>
+    <ion-item>
+      <ion-label>Data Nascimento</ion-label>
+      <ion-datetime displayFormat="DD MMM YYYY" pickerFormat="DD MMM YYYY"  [(ngModel)]="userData.birthday"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Celular</ion-label>
+      <ion-input type="tel"  [(ngModel)]="userData.phone"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Senha</ion-label>
+      <ion-input  type="password"  [(ngModel)]="userData.password"></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-list radio-group [(ngModel)]="userData.type">
+    <ion-item>
+      <ion-label>PAI/MÃE/RESPONSÁVEL</ion-label>
+      <ion-radio value="1" ></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>FORMANDO</ion-label>
+      <ion-radio value="2"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>ORGANIZADOR/PROFESSOR</ion-label>
+      <ion-radio value="3"></ion-radio>
+    </ion-item>
+  </ion-list>
+  <button ion-button icon-left block full large (click)="efetuaCadastro()">
+    <ion-icon ios="ios-person-add" md="md-person-add"></ion-icon>
+    Cadastrar-se
+  </button>
+  <p text-center="">Ao se cadastrar você concorda em receber e-mails, <br/> notificações e mensagens do Peraltas All Party. </p>
+</ion-content>

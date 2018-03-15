@@ -1,0 +1,21 @@
+<ion-content padding>
+    <ion-list>
+        <ion-item>
+            <ion-label floating>Email</ion-label>
+            <ion-input type="text" value=""></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Senha</ion-label>
+            <ion-input  type="password"></ion-input>
+        </ion-item>
+    </ion-list>
+    <button ion-button icon-right block full large color="secondary" (click)="loginAction()">
+        Entrar
+        <ion-icon ios="ios-log-in" md="md-log-in"></ion-icon>
+    </button>
+    <br/>
+    <button ion-button icon-left block full large (click)="cadastrarAction()">
+        <ion-icon ios="ios-person-add" md="md-person-add"></ion-icon>
+        Cadastrar
+    </button>
+</ion-content>
